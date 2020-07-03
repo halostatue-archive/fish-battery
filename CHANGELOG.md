@@ -1,4 +1,9 @@
-# fish-battery Changelog
+# halostatue/fish-battery Changelog
+
+## 1.0.1
+
+- Fix a bug introduced when switching from functions in one file to multiple
+  functions.
 
 ## 1.0
 

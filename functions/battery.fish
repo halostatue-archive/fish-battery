@@ -23,7 +23,7 @@ function battery -d 'Report on battery status for OS X and Linux'
     set -l charge_down ↓
     set -l clock ⏱️
 
-    battery.info.update
+    battery.info
 
     switch $__battery_slots
         case 0 1 2
@@ -48,5 +48,6 @@ function battery -d 'Report on battery status for OS X and Linux'
         printf " %s%s%s%s" $low $charge_down $charge $normal
     end
 
-    printf " %s%s %% %s %s%s\n" $color $__battery_pct $clock $__battery_time_left $normal
+    printf " %s%s %%" $color $__battery_pct
+    printf " %s %s%s\n" $clock $__battery_time_left $normal
 end
