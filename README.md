@@ -16,7 +16,8 @@ appreciated.
 Install with [Fisher][] (recommended):
 
 ```fish
-fisher add halostatue/fish-battery
+fisher add halostatue/fish-battery # Fisher 3.x
+fisher install halostatue/fish-battery # Fisher 4.0+
 ```
 
 <details>
