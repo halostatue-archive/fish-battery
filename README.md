@@ -1,23 +1,19 @@
 # halostatue/fish-battery
 
-A rewrite of [oh-my-fish/plugin-battery][] for the [fish shell][], providing
+A rewrite of [oh-my-fish/plugin-battery] for the [fish shell], providing
 a battery utility that is compatible with MacOS and Linux.
 
-Note that I do not use Linux on a laptop, so the Linux battery detection code
-is based on `oh-my-fish/plugin-battery` with some changes. It may not be
-correct, and there may be ways of reading the battery data that do not
-require `upower`. Pull requests to enhance this functionality are greatly
-appreciated.
-
-[![Version][]][]
+Note that I do not use Linux on a laptop, so the Linux battery detection code is
+based on `oh-my-fish/plugin-battery` with some changes. It may not be correct,
+and there may be ways of reading the battery data that do not require `upower`.
+Pull requests to enhance this functionality are greatly appreciated.
 
 ## Installation
 
-Install with [Fisher][] (recommended):
+Install with [Fisher] (recommended):
 
 ```fish
-fisher add halostatue/fish-battery # Fisher 3.x
-fisher install halostatue/fish-battery # Fisher 4.0+
+fisher install halostatue/fish-battery
 ```
 
 <details>
@@ -116,15 +112,13 @@ Current battery charge expressed as a percentage.
 
 ### System Requirements
 
-- [fish][] 3.0+
+- [fish] 3.0+
+- upower (Linux only)
 
-## License
+## Licence
 
 [MIT](LICENCE.md)
 
-[version]: https://img.shields.io/github/tag/halostatue/fish-battery.svg?label=Version
-
-[![Version][]]: https://github.com/halostatue/fish-battery/releases
-[Fisher]: https://github.com/jorgebucaran/fisher
+[fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
 [oh-my-fish/plugin-battery]: https://github.com/oh-my-fish/plugin-battery
