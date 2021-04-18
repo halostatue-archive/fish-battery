@@ -1,11 +1,11 @@
 # halostatue/fish-battery Changelog
 
-## 1.0.1
+## 1.0.1 / 2020-07-03
 
 - Fix a bug introduced when switching from functions in one file to multiple
   functions.
 
-## 1.0
+## 1.0 / 2020-06-28
 
 - Initial version, based on [oh-my-fish/plugin-battery][].
 
