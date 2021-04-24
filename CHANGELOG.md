@@ -1,5 +1,9 @@
 # halostatue/fish-battery Changelog
 
+## 1.0.2 / 2021-04-24
+
+- Fix "Unknown option -q" error on Linux, contributed by [@pbevin]. [#1]
+
 ## 1.0.1 / 2020-07-03
 
 - Fix a bug introduced when switching from functions in one file to multiple
@@ -10,3 +14,5 @@
 - Initial version, based on [oh-my-fish/plugin-battery][].
 
 [oh-my-fish/plugin-battery]: https://github.com/oh-my-fish/plugin-battery
+[@pbevin]: https://github.com/pbevin
+[#1]: https://github.com/halostatue/fish-battery/pull/1
