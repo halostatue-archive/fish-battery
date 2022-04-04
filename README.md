@@ -1,19 +1,20 @@
 # halostatue/fish-battery
 
-A rewrite of [oh-my-fish/plugin-battery] for the [fish shell], providing
-a battery utility that is compatible with MacOS and Linux.
+A rewrite of [oh-my-fish/plugin-battery][] for the [fish shell][], providing
+a battery utility that is compatible with macOS and Linux.
 
-Note that I do not use Linux on a laptop, so the Linux battery detection code is
-based on `oh-my-fish/plugin-battery` with some changes. It may not be correct,
-and there may be ways of reading the battery data that do not require `upower`.
-Pull requests to enhance this functionality are greatly appreciated.
+> NOTE: I do not use Linux on a laptop, so the Linux battery detection code is
+> based on `oh-my-fish/plugin-battery` with some changes. It may not be correct,
+> and there may be ways of reading the battery data that do not require
+> `upower`. Pull requests to enhance this functionality are greatly appreciated.
 
 ## Installation
 
-Install with [Fisher] (recommended):
+Install with [Fisher][] (recommended):
 
 ```fish
-fisher install halostatue/fish-battery
+fisher install halostatue/fish-battery@1.x
+
 ```
 
 <details>
@@ -21,15 +22,14 @@ fisher install halostatue/fish-battery
 
 ---
 
-Copy `functions/*.fish` to your fish configuration directory preserving the
-directory structure.
+Copy `functions/*.fish` and `completeions/*.fish` to your fish configuration
+directory preserving the directory structure.
 
 </details>
 
 ## Usage
 
-Display battery status (slots, charging state, percentage and time
-remaining).
+Display battery status (slots, charging state, percentage and time remaining).
 
 ```fish
 % battery
@@ -46,15 +46,15 @@ Customize `battery` options.
 ### Environment Variables
 
 Unlike `oh-my-fish/plugin-battery`, this `battery` function does not export
-environment variables. That is done with `battery.info -x`. Instead, the
-helper function `battery.info` and the platform-specific versions
-(`battery.info.linux` and `battery.info.darwin`) use the
-`--no-scope-shadowing` flag so that calling `battery.info` will expose the
-variables to a function calling it, but does not export variables without an
-explicit opt-in, making `battery.info` safe to use in prompt functions
-without affecting the external environment.
+environment variables. That is done with `battery.info -x`. Instead, the helper
+function `battery.info` and the platform-specific versions (`battery.info.linux`
+and `battery.info.darwin`) use the `--no-scope-shadowing` flag so that calling
+`battery.info` will expose the variables to a function calling it, but does not
+export variables without an explicit opt-in, making `battery.info` safe to use
+in prompt functions without affecting the external environment.
 
-In the list below, the first value is the _exported_ version (`battery.info -x`) and the second value is the local scope version.
+In the list below, the first value is the _exported_ version (`battery.info -x`)
+and the second value is the local scope version.
 
 #### `BATTERY_IS_PLUGGED` / `__battery_is_plugged`
 
@@ -64,8 +64,8 @@ In the list below, the first value is the _exported_ version (`battery.info -x`)
 | Unplugged  | unset                | `false`                |
 
 If the battery is plugged in, this will be `true` for both versions. If it is
-not plugged in, the exported variable will be unset and the local variable
-will be `false`.
+not plugged in, the exported variable will be unset and the local variable will
+be `false`.
 
 ```fish
 battery.info -x
@@ -80,8 +80,8 @@ set -q BATTERY_IS_PLUGGED; and echo Plugged 🔌
 | Uncharging | unset                 | `false`                 |
 
 If the battery is charging, this will be `true` for both versions. If it is
-discharging, the exported variable will be unset and the local variable will
-be `false`.
+discharging, the exported variable will be unset and the local variable will be
+`false`.
 
 ```fish
 battery.info -x
@@ -90,8 +90,8 @@ set -q BATTERY_IS_CHARGING; and echo Charging ⌁
 
 #### `BATTERY_TIME_LEFT` / `__battery_time_left`
 
-Time left in `HH:MM` format. On MacOS, this will be empty if there are more
-than 1,000 minutes left (the value 65535 is used to indicate that there is no
+Time left in `HH:MM` format. On macOS, this will be empty if there are more than
+1,000 minutes left (the value 65535 is used to indicate that there is no
 estimate possible).
 
 #### `BATTERY_SLOTS`
