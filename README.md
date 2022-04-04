@@ -114,7 +114,7 @@ Current battery charge expressed as a percentage.
 
 ### System Requirements
 
-- [fish] 3.0+
+- [fish][] 3.0+
 - upower (Linux only)
 
 ## Licence

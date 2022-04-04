@@ -2,7 +2,7 @@
 
 ## 1.0.2 / 2021-04-24
 
-- Fix "Unknown option -q" error on Linux, contributed by [@pbevin]. [#1]
+- Fix "Unknown option -q" error on Linux, contributed by [@pbevin][]. [#1][]
 
 ## 1.0.1 / 2020-07-03
 
