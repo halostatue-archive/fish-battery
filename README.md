@@ -1,5 +1,7 @@
 # halostatue/fish-battery
 
+[![Version][]](https://github.com/halostatue/fish-battery/releases)
+
 A rewrite of [oh-my-fish/plugin-battery][] for the [fish shell][], providing
 a battery utility that is compatible with macOS and Linux.
 
@@ -119,6 +121,8 @@ Current battery charge expressed as a percentage.
 
 [MIT](LICENCE.md)
 
+[fish shell]: https://fishshell.com 'friendly interactive shell'
+[version]: https://img.shields.io/github/tag/halostatue/fish-battery.svg?label=Version
 [fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
 [oh-my-fish/plugin-battery]: https://github.com/oh-my-fish/plugin-battery
