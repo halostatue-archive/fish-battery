@@ -1,7 +1,7 @@
 # MIT Licence
 
-Copyright © 2020—2022 Austin Ziegler and other contributors named in the
-[CHANGELOG](CHANGELOG.md).
+Copyright © 2020—2022 Austin Ziegler and other contributors named in
+[CONTRIBUTORS](./CONTRIBUTORS.md).
 
 Based in on code copyright © 2015 Jorge Bucaran
 
