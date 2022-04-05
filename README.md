@@ -24,7 +24,7 @@ fisher install halostatue/fish-battery@1.x
 
 ---
 
-Copy `functions/*.fish` and `completeions/*.fish` to your fish configuration
+Copy `functions/*.fish` and `completions/*.fish` to your fish configuration
 directory preserving the directory structure.
 
 </details>

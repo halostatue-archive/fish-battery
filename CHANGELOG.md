@@ -1,5 +1,11 @@
 # halostatue/fish-battery Changelog
 
+## 1.0.3 / 2022-04-04
+
+- Improved completion scripts for `battery` and `battery.info`.
+- Reformatted scripts.
+- Made the passing of unknown flags an error.
+
 ## 1.0.2 / 2021-04-24
 
 - Fix "Unknown option -q" error on Linux, contributed by [@pbevin][]. [#1][]

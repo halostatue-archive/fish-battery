@@ -1,18 +1,22 @@
 function battery.info -d 'Update and export battery information' --no-scope-shadowing
-    argparse 'x/export' -- $argv
+    argparse x/export -- $argv
+    or return 1
 
-    test -z $OSTYPE; and set OSTYPE (uname)
+    test -z $OSTYPE
+    and set OSTYPE (uname)
 
-    if test $OSTYPE = 'Darwin'
-        battery.info.darwin
-    else if test $OSTYPE = 'Linux'
-        battery.info.linux
-    else
-        echo >&2 'Unknown operating system: '$OSTYPE
-        return 1
+    switch $OSTYPE
+        case Darwin
+            battery.info.darwin
+        case Linux
+            battery.info.linux
+        case '*'
+            echo >&2 'battery.info: Unknown operating system: '$OSTYPE
+            return 1
     end
 
-    set -q _flag_export; or return
+    set -q _flag_export
+    or return
 
     set -gx BATTERY_SLOTS $__battery_slots
     set -gx BATTERY_MAX_CAP $__battery_max_cap

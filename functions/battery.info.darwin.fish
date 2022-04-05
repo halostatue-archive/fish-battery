@@ -2,10 +2,13 @@ function battery.info.darwin --no-scope-shadowing
     set -l ioreg (ioreg -rc "AppleSmartBattery")
 
     set __battery_is_plugged false
-    string match -rq "\"ExternalConnected\" = Yes" $ioreg; and set __battery_is_plugged true
-
     set __battery_is_charging false
-    string match -rq "\"IsCharging\" = Yes" $ioreg; and set __battery_is_charging true
+
+    string match -rq "\"ExternalConnected\" = Yes" $ioreg
+    and set __battery_is_plugged true
+
+    string match -rq "\"IsCharging\" = Yes" $ioreg
+    and set __battery_is_charging true
 
     set __battery_max_cap (string match -r "\"MaxCapacity\" = (\d+)" $ioreg)[2]
     set __battery_cur_cap (string match -r "\"CurrentCapacity\" = (\d+)" $ioreg)[2]
